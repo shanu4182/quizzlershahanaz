@@ -38,6 +38,8 @@ class _QuizPageState extends State<QuizPage> {
 List<bool> answers = [ false,true,true];
 
 
+  List<bool> answers = [false,true,true];
+
   int questionNumber = 0;
 
   @override
@@ -80,12 +82,21 @@ List<bool> answers = [ false,true,true];
 
                 bool correctAnswer = answers[questionNumber];
 
+                if(correctAnswer == true){
+                  print('user got it right');
+                }else{
+                  print('user got it wrong');
+                }
+
+
+
 
                 if(correctAnswer == true){
                   print('user got it right!');
                 }else{
                   print('user got if wrong');
              
+
 
                 setState(() {
                   questionNumber++;
@@ -111,6 +122,16 @@ List<bool> answers = [ false,true,true];
               onPressed: () {
                 //The user picked false.
 
+                //hello shanu
+
+                 bool correctAnswer = answers[questionNumber];
+                if(correctAnswer == false){
+                  print('user got it right');
+                }else{
+                  print('user got it wrong');
+                }
+
+
                  bool correctAnswer = answers[questionNumber];
 
                 if (correctAnswer == false){
@@ -118,6 +139,7 @@ List<bool> answers = [ false,true,true];
                 }else{
                 print('user got  worng');
               }
+
 
 
                 setState(() {
