@@ -33,12 +33,9 @@ class _QuizPageState extends State<QuizPage> {
     'A slug\'s blood is green.?',
   ];
 
-  List<bool> answers = [
-    false,
-    true,
-    true,
 
-  ];
+List<bool> answers = [ false,true,true];
+
 
   int questionNumber = 0;
 
@@ -81,11 +78,12 @@ class _QuizPageState extends State<QuizPage> {
                 //The user picked true.
                 bool correctAnswer = answers[questionNumber];
 
+
                 if(correctAnswer == true){
                   print('user got it right!');
                 }else{
                   print('user got if wrong');
-                }
+             
                 setState(() {
                   questionNumber++;
                 });
@@ -111,11 +109,12 @@ class _QuizPageState extends State<QuizPage> {
                 //The user picked false.
                  bool correctAnswer = answers[questionNumber];
 
-                if(correctAnswer == false){
-                  print('user got it right!');
+                if (correctAnswer == false){
+                   print('user is it right');
                 }else{
-                  print('user got if wrong');
-                }
+                print('user got  worng');
+              }
+
                 setState(() {
                   questionNumber++;
                 });
