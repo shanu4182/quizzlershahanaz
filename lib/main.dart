@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(Quizzler());
@@ -32,6 +33,10 @@ class _QuizPageState extends State<QuizPage> {
     'A slug\'s blood is green.?',
   ];
   List<bool> answer = [false, true, true];
+
+
+List<bool> answers = [ false,true,true];
+
 
   int questionNumber = 0;
 
@@ -72,12 +77,16 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 //The user picked true.
-                bool correctAnswer = answer[questionNumber];
-                if (correctAnswer == true) {
+
+                bool correctAnswer = answers[questionNumber];
+
+
+                if(correctAnswer == true){
                   print('user got it right!');
-                } else {
-                  print('user got it wrong');
-                }
+                }else{
+                  print('user got if wrong');
+             
+
                 setState(() {
                   questionNumber++;
                 });
@@ -101,12 +110,16 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 //The user picked false.
-                bool correctAnswer = answer[questionNumber];
-                if (correctAnswer == false) {
-                  print('user got it right!');
-                } else {
-                  print('user got it wrong');
-                }
+
+                 bool correctAnswer = answers[questionNumber];
+
+                if (correctAnswer == false){
+                   print('user is it right');
+                }else{
+                print('user got  worng');
+              }
+
+
                 setState(() {
                   questionNumber++;
                 });
